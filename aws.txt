@@ -1,0 +1,10 @@
+[AWS]
+> Amazon Web Service
+> 클라우드 컴퓨팅
+> 서버리스 기능 지원
+
+> 사용한 만큼 지불
+> 루트 사용자
+
+[자격증]
+> developer associate

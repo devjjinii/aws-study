@@ -16,3 +16,19 @@
 
 - SSD
 - Magnetic/HDD
+
+[ELB] // * 중요
+>  Elastic Load Balancers
+- 서버의 흐름을 균형있게 흘려보냄.
+- 병목현상 방지
+- healthy instance 로 보내줌.
+
+> Application Load Balancer : OSI Layer7
+> Network Load Balancer : OSI Layer4
+> classic Load Balancer : Legacy 로 간주. 거의 사용X ** 시험에 가장 많이 등장.
+-- Load Balancer Error : 504 ERROR
+
+#### X-Forwarded-For 헤더 ####
+***** public IP address(152.12.3.225) >>>dns>>> ELB(private IP address)(10.0.0.23) >>> EC2(10.0.0.23)
+** EC2는 Private IP address 밖에 볼 수 없음 >>> X-Forwarded-For 헤더 를 통해 public IP를 찾아볼 수 있음.
+###############################

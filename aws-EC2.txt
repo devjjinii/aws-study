@@ -1,0 +1,18 @@
+[EC2]
+> Elastic Compute Cloud
+> 인스턴스를 키고 끄기 가능
+
+- On-demand : 시간 단위로 가격이 고정
+- Reserved : 한정된 EC2 용량 사용가능, 년수별로 할인 적용
+- Spot : 입찰 가격 적용(경매), 인스턴스의 시작과 끝기간이 중요하지 않을때
+
+[EBS] // 디스크 볼륨
+> Elastic Block Storage
+> EC2안에 붙어 있는 하드디스크라고 이해 (저장 공간)
+
+- 디스크 볼륨 위에 File System이 생성.
+- 특정 Availability Zone(AZ) 에 생성.
+=====> 한쪽이 죽으면 AZ라는 백업을 통해 서비스 제공 가능(Disaster Recovery)
+
+- SSD
+- Magnetic/HDD

@@ -1,0 +1,70 @@
+[S3] - Simple Storage Service
+
+- 안전하고 가변적인 object 저장공간을 제공
+            - key 파일명
+            - value 데이터
+            - version ID
+            - metadata
+            - cors( cross origin resource sharing)
+            
+- 편리한 UI 인터페이스
+- 0 ~ 5TB까지 지원
+- 저장공간 무제한
+- Bucket 이라는 이름 사용 (디렉토리와 유사)
+
+* s3 data consistency model
+ - read after write consistency (put)
+ - eventual consistency (update, delete)
+ 
+==== 종류 ====
+- 일반 s3
+  . 가장 보편적
+  . 높은 내구성, 가용성
+  
+- s3 - IA(Infrequent Access)
+  . 자주 접근되지 않으나, 빠른 접근이 요구 될때
+  . 일반 s3에 비요응ㄴ 저렴하나 추가 비용 발생
+  . 멀티 AZ를 통한 데이터 저장, 가용성 높음
+  
+- s3 - One Zone IA
+  . 단일 AZ를 통한 데이터 저장
+  . 단일 AZ에 의한 데이터 접근 제한(낮은 가용성)
+  . s3-IA 보다 20프로 비용 저렴
+  
+- Glacier (빙하)
+  . 거의 접근하지 않을 데이터 저장 유용
+  . 저렴한 비용
+  . 데이터 접근 시 대략 4-5 시간 소요
+  
+- Intelligent Tiering
+  . 2018) 새로 런칭
+  . 데이터 접근 주기가 불규칙할때 유용
+  . 2가지 티어 존재 ( Frequent Tier, Infrequent Tier )
+    . 데이터 접근주기에 따라 선택됨
+    . Frequent가 더 비쌈
+  . 비용 절감 효율을 누릴 수 있음
+============== 
+
+- 요금
+// GB당 / put, get, copy 요청 횟수당 / 데이터 다운도르시, 다른 리소스로 전송시 / metadata 종류에 따라
+
+- 사용 예)
+. 파일 저장소( 로그, 다양한 형태의 파일 )
+. 웹사이트 호스팅
+
+. cors ( 리전이 다른 버킷에서 접근할 때)
+
+////// 
+최초 s3 버킷 생성시 > private
+1. 버킷 정책 변경
+2. 접근 제어 리스트 변경 
+
+- 암호화 (Encryption)
+1. 파일 업로드/다운로드시  >>  SSL/TLS
+        secure socket layer, transport layer security
+2. 가만히 있을시 >> SEE-S3 , SSE-KMS, SSE-C
+        server-side encryption
+
+암호화 과정
+> put 요청이 생성됨
+> x-amz-server-side-encryption-parameter : ex) AES-256

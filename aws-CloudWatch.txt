@@ -1,0 +1,22 @@
+[CloudWatch]
+
+- aws 리소스 사용의 실시간 모니터링 기능 지원
+- 다양한 "이벤트"들을 로그파일로 저장
+  > 이벤트 : s3 버킷 파일 업로드/삭제, 접근 거부 발생, 데이터 베이스 접근 속도 등
+- 이벤트& 알람 설정을 통해 aws lamdba로 전송 가능
+
+종류
+. Basic Monitoring : 무료 5분간격)
+. Detailed Monitoring : 유료 1분간격
+
+* Alarm
+- 임의로 정해놓은 값에 도달 시 울림
+- 특정 이벤트들을 작동시킬수 있음
+
+// alarm state
+> alarm
+> insufficient
+> ok ( 알람이 울리지 않고 잘 돌아간다는뜻)
+
+Billing Alarm
+> 정해놓은 지출 임계값을 초과할 경우 sns을 통하여 경고를 함

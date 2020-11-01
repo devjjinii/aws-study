@@ -1,0 +1,15 @@
+[CloudFront]
+
+- 정적, 동적 실시간 웹사이트 컨텐츠를 전달
+- Edge Location을 사용
+- Content Delivery Network(CDN)
+- Distributed Network
+
+ex) 한국에서 웹 사이트 호스팅 
+ > 전세계 사람들이 접근
+ > edge location(: 전 세계 지역마다 설치되어 있는 서버의 컬렉션 개념)을 통해 컨텐츠를 전달
+  > 컨텐츠 정보를 캐시에 저장
+ > origin : 원래 컨텐츠가 있는 곳, 웹서버 호스팅이 이루어지는 곳(S3, EC2)
+ > distribution : CDN에서 사용되어지고 edge location을 묶고 있는 개념
+ 
+ 

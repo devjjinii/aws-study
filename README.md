@@ -9,3 +9,4 @@
 * 인강으로 공부중
     * https://www.aws.training/Details/Curriculum?id=20685
     * https://www.inflearn.com/course/aws-%EC%9E%85%EB%AC%B8
+    * https://www.aws.training/Details/eLearning?id=68459
